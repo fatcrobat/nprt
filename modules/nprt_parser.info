@@ -1,0 +1,5 @@
+name = XML Parser
+description = XML Parser for the Warcraft Raid Raidtracker.
+core = 6.x
+dependencies[] = nprt
+package = nprt

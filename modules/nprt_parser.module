@@ -1,0 +1,209 @@
+<?php 
+
+function nprt_parser_menu(){
+	$items = array();
+	$items['admin/settings/nprt/add'] = array(
+		'title' => 'Add Raid',
+		'description' => 'Nextpls XML Parser for Importing Raid Date.',
+		'page callback' => 'drupal_get_form',
+		'access arguments' => array('administer wowprogress'),
+		'page arguments' => array('nprt_parser_add_raid_form'),
+		'type' => MENU_LOCAL_TASK,
+	);
+	return $items;
+}
+
+function nprt_parser_add_raid_form(&$form_state){
+	// XML Input has to surrounded in CDATA, otherwise Tags get stripped.
+	drupal_add_js('
+		Drupal.behaviors.nprtxmlcdata = function (context){
+			var $f = $(context).find("#nprt-parser-add-raid-form");
+			var $xml = $(context).find("textarea[name=xml]");
+			$(context).ready(function(){
+				$xml.val("");
+			});
+			$f.submit(function(){
+				var data = $xml.val();
+				var encoded = data.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+				$xml.val(encoded);
+			});
+		};'
+		,'inline');
+	$form = array();
+	$form['#attributes'] = array('enctype' => 'multipart/form-data');
+	$form['upload'] = array(
+		'#type'			=>	'fieldset',
+		'#title'		=>	t('Raid Informations'),
+		'#collapsible'	=>	true,
+		'#collapsed'	=>	false,		
+	);
+	$form['upload']['xml']	= array(
+		'#type'			=>	'textarea',
+		'#title'		=>	t('XML Data'),
+		'#description'	=>	t('Put the exported XML File in here.'),
+	);
+	$form['upload']['submit'] = array('#type' => 'submit', '#value' => t('Import Raid'));
+	return $form;
+}
+
+function nprt_parser_add_raid_form_validate($form, &$form_state){
+	if ($form_state['values']['xml'] == '') {
+    	form_set_error('', t('You must insert XML Data in the Input Container.'));
+  	}
+}
+
+function nprt_parser_add_raid_form_submit($form, &$form_state){
+	$data = html_entity_decode($form_state['values']['xml']);
+	$xml = file_save_data($data, file_directory_temp().'/nprt.xml');
+	$xsd = drupal_get_path('module','nprt_parser').'/mldkp.xsd';
+	if(nprt_parser_validate($xml, $xsd)){
+		$raid = nprt_get_xml_content($xml);
+		$id = nprt_parser_raid_insert($raid['zone'], $raid['start'], $raid['end'], $raid['reporter']);
+		nprt_parser_player_update($raid['players']);
+		$players= nprt_parser_loot($raid['loots'], $id);
+		nprt_parser_raid_attendees($players, $raid['players'], $id);
+	}else{
+		drupal_set_message(t('The imported XML doesn\'t\ match XSD Schema.'), 'error');
+	}
+}
+
+/**
+ * Validate the XML file
+ * @param $xml
+ * @param $xsd
+ */
+function nprt_parser_validate($xml, $xsd){
+	$doc = new DOMDocument();
+	$doc->load($xml);  
+	if($doc->schemaValidate($xsd)){
+		return true;
+	}
+	return false;
+}
+
+function nprt_get_xml_content($xml){
+	$raid = new SimpleXMLElement($xml,null,true); // xml object holding all data in
+	$output = array(
+		'zone' 		=> $raid->xpath('zone'), // raiding zon (icc, bwl etc)
+		'players'	=> $raid->xpath('//playerinfos/player'), // array of players attending the raid
+		'loots' 	=> $raid->xpath('//loots/loot/player/parent::*'), // discard disenchanted items
+		'kills' 	=> $raid->xpath('//bosskills/bosskill'), // get all bosskills
+		'reporter'	=> $raid->xpath('exporter'), // name of the reporting player
+		'start' 	=> $raid->xpath('start'),
+		'end' 		=> $raid->xpath('end'),
+	);
+	return $output;
+}
+
+
+function nprt_parser_raid_attendees($playerlist, $raidattendees, $raidid){
+	foreach($raidattendees as $attendee){
+		$result = db_query("INSERT into {nprt_player_raid} (player_id, raid_id) ".
+							"VALUES (%d, %d) ON DUPLICATE KEY UPDATE raid_id = %d", 
+							array_search($attendee->name, $playerlist), $raidid, $raidid);
+		$restype = db_affected_rows($result);
+			if($restype ==  1){ // Insert
+				drupal_set_message(t('Player: %playername inserted for this Raid into Database.', array('%playername' => $attendee->name)), 'status');
+			}else if($restype == 2){  // Nothing Updated/Inserted for this Entry
+				// TODO: Message handling (Watchdog??)
+			}else if($restype == 3){ // Update
+				drupal_set_message(t('Player: %playername already found for this Raid in Database.', array('%playername' => $attendee->name)), 'status');
+			}else{
+				drupal_set_message(t('Player: %playername failed while loading into database.', array('%playername' => $attendee->name)), 'error');
+			}		
+	}
+}
+
+
+function nprt_parser_loot($loots, $raidid){
+	$playersindb = db_query("SELECT id, name FROM {nprt_player}");
+	while($row = db_fetch_array($playersindb)){
+		$players[$row['id']] = $row['name'];
+	}	
+	foreach ($loots as $key => $loot){
+		if(in_array($loot->player, $players)){
+			$itemid = array_shift(explode(':',$loot->itemid));
+			$result = db_query(	"INSERT INTO {nprt_item} (id, name, zone, boss) ".
+								"VALUES (%d, '%s', '%s', '%s') ON DUPLICATE KEY UPDATE ".
+								"name = '%s', zone='%s', boss='%s'", 
+								$itemid, $loot->itemname, $loot->zone, $loot->boss, 
+								$loot->itemname, $loot->zone, $loot->boss);
+			$restype = db_affected_rows($result);
+			if($restype ==  1){ // Insert
+				drupal_set_message(t('Item: %itemid - %itemname successfully inserted into Database.', array('%itemid' => $itemid, '%itemname' => $loot->itemname)), 'status');
+			}else if($restype == 2){  // Nothing Updated/Inserted for this Entry
+				// TODO: Message handling (Watchdog??)
+			}else if($restype == 3){ // Update
+				drupal_set_message(t('Item: %itemid has been successfully updated in Database.', array('%itemid' => $itemid, '%itemname' => $loot->itemname)), 'status');
+			}else{
+				drupal_set_message(t('Item: %itemid - %itemname failed while loading into database.', array('%itemid' => $itemid, '%itemname' => $loot->itemname)), 'error');
+			}
+			$result = db_query( "INSERT INTO {nprt_player_item} (raid_id, player_id, item_id)".
+								"VALUES (%d, %d, %d)", $raidid, array_search($loot->player, $players), $itemid);				
+		}
+	}
+	return $players;
+}
+
+
+function nprt_parser_player_update($players){
+	$inscount = 0;
+	$upcount = 0;
+	$failcount = 0;
+	foreach($players as $key => $player){
+		$data = array(
+			'name'	=> $player->name,
+			'race'	=> $player->race,
+			'sex'	=> $player->sex,
+			'class'	=> $player->class,
+			'level'	=> $player->level,
+		);
+		
+		$result = db_query("INSERT INTO {nprt_player} (name, race, sex, class) ".
+						   "VALUES ('%s',%d, '%s', %d) ON DUPLICATE KEY UPDATE ".
+						   "race = %d, sex = '%s', class=%d", 
+							$data['name'], $data['race'], $data['sex'], $data['class'],
+							$data['race'], $data['sex'], $data['class']);
+		$restype = db_affected_rows($result);
+		if($restype ==  1){ // Insert
+			drupal_set_message(t('Player: %player successfully inserted into Database.', array('%player' => $data['name'])), 'status');
+			$inscount ++;
+		}else if($restype == 2){  // Nothing Updated/Inserted for this Entry
+			// TODO: Message handling (Watchdog??)
+		}else if($restype == 3){ // Update
+			drupal_set_message(t('Player: %player has been successfully updated into Databse.', array('%player' => $data['name'])), 'status');
+			$upcount++;	
+		}else{
+			drupal_set_message(t('Player: %player failed while loading into database.', array('%player' => $data['name'])), 'error');
+			$failcount++;
+		}
+	}
+	drupal_set_message(	t('Player Update ended up with: INSERT: %insertcount - UPDATE: %updatecount  - FAILURE: %failcount', 
+						array('%insertcount' =>$inscount, '%updatecount' => $upcount, '%failcount' => $failcount)),'status');
+}
+
+
+function nprt_parser_raid_insert($zone, $start, $end, $reporter){
+	$check = db_query("SELECT Max(id) id FROM {nprt_raid} WHERE zone='%s' AND start='%s'", $zone[0], date("Y-m-d H:i:s", strval($start[0]))); // Search for duplicates
+	$id = db_fetch_object($check)->id;
+	if($id == null){ // no raid with this zone/start found in db
+		$result = db_query("INSERT INTO {nprt_raid} (zone, start, end, reporter) ".
+						   "VALUES ('%s', '%s', '%s', '%s') ", 
+							$zone[0], date("Y-m-d H:i:s", strval($start[0])),date("Y-m-d H:i:s", strval($end[0])), 
+							$reporter[0]);
+		if($result == 1){
+			drupal_set_message(	t('Raid: %zone on %date successfully inserted into Database.', 
+								array('%zone' => $zone[0], '%date' => date("Y-m-d H:i:s", strval($start[0])))), 'status');
+			$id=db_last_insert_id('nprt_raid', 'id');
+		}					
+	}else{
+		$result = db_query("UPDATE {nprt_raid} SET end='%s', reporter='%s' WHERE id = %d", date("Y-m-d H:i:s", strval($end[0])),$reporter[0], $id);
+		drupal_set_message(	t('Raid: %zone on %date already exitst in the Database, only updated End Date to %end and Reporter to %reporter.', 
+							array(	'%zone' 	=> 	$zone[0], 
+									'%date' 	=> 	date("Y-m-d H:i:s", strval($start[0])), 
+									'%end' 		=>	date("Y-m-d H:i:s", strval($end[0])), 
+									'%reporter' => 	$reporter[0])), 
+							'warning');				
+	}
+	return $id;
+}

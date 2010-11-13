@@ -1,0 +1,2256 @@
+<RaidInfo>
+	<key>10/24/10 18:43:00</key>
+	<realm>Gul'dan</realm>
+	<start>10/24/10 18:43:00</start>
+	<end>10/24/10 22:05:00</end>
+	<zone>Eiskronenzitadelle</zone>
+	<PlayerInfos>
+		<key1>
+			<name>Boombox</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key1>
+		<key2>
+			<name>Zesto</name>
+			<race>Scourge</race>
+			<sex>2</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+		</key2>
+		<key3>
+			<name>Yiggsy</name>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+		</key3>
+		<key4>
+			<name>Alphacow</name>
+			<race>Tauren</race>
+			<sex>3</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+		</key4>
+		<key5>
+			<name>Lostmage</name>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>MAGE</class>
+			<level>80</level>
+		</key5>
+		<key6>
+			<name>Xmølol</name>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>WARLOCK</class>
+			<level>80</level>
+		</key6>
+		<key7>
+			<name>Kyu</name>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+		</key7>
+		<key8>
+			<name>Zeromancer</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+		</key8>
+		<key9>
+			<name>Mortala</name>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+		</key9>
+		<key10>
+			<name>Trepper</name>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+		</key10>
+		<key11>
+			<name>Britz</name>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>WARLOCK</class>
+			<level>80</level>
+		</key11>
+		<key12>
+			<name>Saphakula</name>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+		</key12>
+		<key13>
+			<name>Neyana</name>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+		</key13>
+		<key14>
+			<name>Zooci</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+		</key14>
+		<key15>
+			<name>Vîatrîx</name>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+		</key15>
+		<key16>
+			<name>Murazok</name>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+		</key16>
+		<key17>
+			<name>Lambock</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key17>
+		<key18>
+			<name>Solokko</name>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>SHAMAN</class>
+			<level>0</level>
+		</key18>
+		<key19>
+			<name>Berzerkvladî</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+		</key19>
+		<key20>
+			<name>Cerfax</name>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+		</key20>
+		<key21>
+			<name>Jhados</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key21>
+		<key22>
+			<name>Rawberry</name>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+		</key22>
+		<key23>
+			<name>Ensky</name>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+		</key23>
+		<key24>
+			<name>Monstanapfel</name>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+		</key24>
+		<key25>
+			<name>Bagor</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key25>
+		<key26>
+			<name>Adoru</name>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>0</level>
+		</key26>
+		<key27>
+			<name>Nosebud</name>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+		</key27>
+		<key28>
+			<name>Dilios</name>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>0</level>
+		</key28>
+		<key29>
+			<name>Krosa</name>
+			<race>Orc</race>
+			<sex>3</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+		</key29>
+		<key30>
+			<name>Gandorar</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key30>
+		<key31>
+			<name>Illicit</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key31>
+		<key32>
+			<name>Matek</name>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>MAGE</class>
+			<level>80</level>
+		</key32>
+		<key33>
+			<name>Errorqlzr</name>
+			<race>Orc</race>
+			<sex>3</sex>
+			<class>HUNTER</class>
+			<level>80</level>
+		</key33>
+		<key34>
+			<name>Séràph</name>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+		</key34>
+		<key35>
+			<name>Loomx</name>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+		</key35>
+		<key36>
+			<name>Piebald</name>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>HUNTER</class>
+			<level>80</level>
+		</key36>
+	</PlayerInfos>
+	<BossKills>
+		<key1>
+			<name>Lord Mark'gar</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 19:09:00</time>
+			<attendees>
+				<key1>
+					<name>Yiggsy</name>
+				</key1>
+				<key2>
+					<name>Boombox</name>
+				</key2>
+				<key3>
+					<name>Berzerkvladî</name>
+				</key3>
+				<key4>
+					<name>Murazok</name>
+				</key4>
+				<key5>
+					<name>Zesto</name>
+				</key5>
+				<key6>
+					<name>Rawberry</name>
+				</key6>
+				<key7>
+					<name>Illicit</name>
+				</key7>
+				<key8>
+					<name>Monstanapfel</name>
+				</key8>
+				<key9>
+					<name>Saphakula</name>
+				</key9>
+				<key10>
+					<name>Krosa</name>
+				</key10>
+				<key11>
+					<name>Zooci</name>
+				</key11>
+				<key12>
+					<name>Zeromancer</name>
+				</key12>
+				<key13>
+					<name>Bagor</name>
+				</key13>
+				<key14>
+					<name>Adoru</name>
+				</key14>
+				<key15>
+					<name>Vîatrîx</name>
+				</key15>
+				<key16>
+					<name>Britz</name>
+				</key16>
+				<key17>
+					<name>Lostmage</name>
+				</key17>
+				<key18>
+					<name>Xmølol</name>
+				</key18>
+				<key19>
+					<name>Séràph</name>
+				</key19>
+				<key20>
+					<name>Dilios</name>
+				</key20>
+				<key21>
+					<name>Alphacow</name>
+				</key21>
+				<key22>
+					<name>Jhados</name>
+				</key22>
+				<key23>
+					<name>Mortala</name>
+				</key23>
+				<key24>
+					<name>Lambock</name>
+				</key24>
+				<key25>
+					<name>Nosebud</name>
+				</key25>
+				<key26>
+					<name>Gandorar</name>
+				</key26>
+				<key27>
+					<name>Neyana</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Solokko</name>
+				</key29>
+				<key30>
+					<name>Cerfax</name>
+				</key30>
+				<key31>
+					<name>Kyu</name>
+				</key31>
+				<key32>
+					<name>Loomx</name>
+				</key32>
+				<key33>
+					<name>Trepper</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key1>
+		<key2>
+			<name>Lady Todeswisper</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 19:18:00</time>
+			<attendees>
+				<key1>
+					<name>Yiggsy</name>
+				</key1>
+				<key2>
+					<name>Boombox</name>
+				</key2>
+				<key3>
+					<name>Berzerkvladî</name>
+				</key3>
+				<key4>
+					<name>Murazok</name>
+				</key4>
+				<key5>
+					<name>Zesto</name>
+				</key5>
+				<key6>
+					<name>Rawberry</name>
+				</key6>
+				<key7>
+					<name>Illicit</name>
+				</key7>
+				<key8>
+					<name>Monstanapfel</name>
+				</key8>
+				<key9>
+					<name>Saphakula</name>
+				</key9>
+				<key10>
+					<name>Krosa</name>
+				</key10>
+				<key11>
+					<name>Zooci</name>
+				</key11>
+				<key12>
+					<name>Zeromancer</name>
+				</key12>
+				<key13>
+					<name>Bagor</name>
+				</key13>
+				<key14>
+					<name>Adoru</name>
+				</key14>
+				<key15>
+					<name>Vîatrîx</name>
+				</key15>
+				<key16>
+					<name>Britz</name>
+				</key16>
+				<key17>
+					<name>Lostmage</name>
+				</key17>
+				<key18>
+					<name>Xmølol</name>
+				</key18>
+				<key19>
+					<name>Séràph</name>
+				</key19>
+				<key20>
+					<name>Dilios</name>
+				</key20>
+				<key21>
+					<name>Alphacow</name>
+				</key21>
+				<key22>
+					<name>Jhados</name>
+				</key22>
+				<key23>
+					<name>Mortala</name>
+				</key23>
+				<key24>
+					<name>Lambock</name>
+				</key24>
+				<key25>
+					<name>Nosebud</name>
+				</key25>
+				<key26>
+					<name>Gandorar</name>
+				</key26>
+				<key27>
+					<name>Neyana</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Solokko</name>
+				</key29>
+				<key30>
+					<name>Cerfax</name>
+				</key30>
+				<key31>
+					<name>Kyu</name>
+				</key31>
+				<key32>
+					<name>Loomx</name>
+				</key32>
+				<key33>
+					<name>Trepper</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key2>
+		<key3>
+			<name>Todesbringer Saurfang</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 19:37:00</time>
+			<attendees>
+				<key1>
+					<name>Yiggsy</name>
+				</key1>
+				<key2>
+					<name>Boombox</name>
+				</key2>
+				<key3>
+					<name>Berzerkvladî</name>
+				</key3>
+				<key4>
+					<name>Alphacow</name>
+				</key4>
+				<key5>
+					<name>Zesto</name>
+				</key5>
+				<key6>
+					<name>Rawberry</name>
+				</key6>
+				<key7>
+					<name>Illicit</name>
+				</key7>
+				<key8>
+					<name>Monstanapfel</name>
+				</key8>
+				<key9>
+					<name>Saphakula</name>
+				</key9>
+				<key10>
+					<name>Krosa</name>
+				</key10>
+				<key11>
+					<name>Zooci</name>
+				</key11>
+				<key12>
+					<name>Zeromancer</name>
+				</key12>
+				<key13>
+					<name>Bagor</name>
+				</key13>
+				<key14>
+					<name>Adoru</name>
+				</key14>
+				<key15>
+					<name>Britz</name>
+				</key15>
+				<key16>
+					<name>Lostmage</name>
+				</key16>
+				<key17>
+					<name>Xmølol</name>
+				</key17>
+				<key18>
+					<name>Séràph</name>
+				</key18>
+				<key19>
+					<name>Gandorar</name>
+				</key19>
+				<key20>
+					<name>Trepper</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Mortala</name>
+				</key22>
+				<key23>
+					<name>Murazok</name>
+				</key23>
+				<key24>
+					<name>Lambock</name>
+				</key24>
+				<key25>
+					<name>Nosebud</name>
+				</key25>
+				<key26>
+					<name>Neyana</name>
+				</key26>
+				<key27>
+					<name>Ensky</name>
+				</key27>
+				<key28>
+					<name>Solokko</name>
+				</key28>
+				<key29>
+					<name>Kyu</name>
+				</key29>
+				<key30>
+					<name>Loomx</name>
+				</key30>
+				<key31>
+					<name>Vîatrîx</name>
+				</key31>
+				<key32>
+					<name>Dilios</name>
+				</key32>
+				<key33>
+					<name>Matek</name>
+				</key33>
+			</attendees>
+		</key3>
+		<key4>
+			<name>Sindragosa</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 20:07:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Zeromancer</name>
+				</key3>
+				<key4>
+					<name>Zesto</name>
+				</key4>
+				<key5>
+					<name>Rawberry</name>
+				</key5>
+				<key6>
+					<name>Gandorar</name>
+				</key6>
+				<key7>
+					<name>Solokko</name>
+				</key7>
+				<key8>
+					<name>Lambock</name>
+				</key8>
+				<key9>
+					<name>Saphakula</name>
+				</key9>
+				<key10>
+					<name>Krosa</name>
+				</key10>
+				<key11>
+					<name>Alphacow</name>
+				</key11>
+				<key12>
+					<name>Britz</name>
+				</key12>
+				<key13>
+					<name>Lostmage</name>
+				</key13>
+				<key14>
+					<name>Neyana</name>
+				</key14>
+				<key15>
+					<name>Xmølol</name>
+				</key15>
+				<key16>
+					<name>Vîatrîx</name>
+				</key16>
+				<key17>
+					<name>Séràph</name>
+				</key17>
+				<key18>
+					<name>Yiggsy</name>
+				</key18>
+				<key19>
+					<name>Nosebud</name>
+				</key19>
+				<key20>
+					<name>Trepper</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Loomx</name>
+				</key22>
+				<key23>
+					<name>Ensky</name>
+				</key23>
+				<key24>
+					<name>Illicit</name>
+				</key24>
+				<key25>
+					<name>Bagor</name>
+				</key25>
+				<key26>
+					<name>Kyu</name>
+				</key26>
+				<key27>
+					<name>Adoru</name>
+				</key27>
+				<key28>
+					<name>Dilios</name>
+				</key28>
+				<key29>
+					<name>Zooci</name>
+				</key29>
+				<key30>
+					<name>Monstanapfel</name>
+				</key30>
+				<key31>
+					<name>Mortala</name>
+				</key31>
+				<key32>
+					<name>Murazok</name>
+				</key32>
+				<key33>
+					<name>Matek</name>
+				</key33>
+			</attendees>
+		</key4>
+		<key5>
+			<name>Blutkönigin Lana'thel</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 20:25:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Zeromancer</name>
+				</key3>
+				<key4>
+					<name>Nosebud</name>
+				</key4>
+				<key5>
+					<name>Rawberry</name>
+				</key5>
+				<key6>
+					<name>Gandorar</name>
+				</key6>
+				<key7>
+					<name>Solokko</name>
+				</key7>
+				<key8>
+					<name>Lambock</name>
+				</key8>
+				<key9>
+					<name>Saphakula</name>
+				</key9>
+				<key10>
+					<name>Krosa</name>
+				</key10>
+				<key11>
+					<name>Britz</name>
+				</key11>
+				<key12>
+					<name>Lostmage</name>
+				</key12>
+				<key13>
+					<name>Neyana</name>
+				</key13>
+				<key14>
+					<name>Xmølol</name>
+				</key14>
+				<key15>
+					<name>Zooci</name>
+				</key15>
+				<key16>
+					<name>Bagor</name>
+				</key16>
+				<key17>
+					<name>Séràph</name>
+				</key17>
+				<key18>
+					<name>Yiggsy</name>
+				</key18>
+				<key19>
+					<name>Errorqlzr</name>
+				</key19>
+				<key20>
+					<name>Vîatrîx</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Loomx</name>
+				</key22>
+				<key23>
+					<name>Alphacow</name>
+				</key23>
+				<key24>
+					<name>Illicit</name>
+				</key24>
+				<key25>
+					<name>Mortala</name>
+				</key25>
+				<key26>
+					<name>Kyu</name>
+				</key26>
+				<key27>
+					<name>Adoru</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Zesto</name>
+				</key29>
+				<key30>
+					<name>Dilios</name>
+				</key30>
+				<key31>
+					<name>Trepper</name>
+				</key31>
+				<key32>
+					<name>Monstanapfel</name>
+				</key32>
+				<key33>
+					<name>Murazok</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key5>
+		<key6>
+			<name>Fauldarm</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 20:37:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Zeromancer</name>
+				</key3>
+				<key4>
+					<name>Nosebud</name>
+				</key4>
+				<key5>
+					<name>Gandorar</name>
+				</key5>
+				<key6>
+					<name>Solokko</name>
+				</key6>
+				<key7>
+					<name>Alphacow</name>
+				</key7>
+				<key8>
+					<name>Saphakula</name>
+				</key8>
+				<key9>
+					<name>Britz</name>
+				</key9>
+				<key10>
+					<name>Lostmage</name>
+				</key10>
+				<key11>
+					<name>Monstanapfel</name>
+				</key11>
+				<key12>
+					<name>Illicit</name>
+				</key12>
+				<key13>
+					<name>Xmølol</name>
+				</key13>
+				<key14>
+					<name>Adoru</name>
+				</key14>
+				<key15>
+					<name>Bagor</name>
+				</key15>
+				<key16>
+					<name>Séràph</name>
+				</key16>
+				<key17>
+					<name>Zesto</name>
+				</key17>
+				<key18>
+					<name>Yiggsy</name>
+				</key18>
+				<key19>
+					<name>Errorqlzr</name>
+				</key19>
+				<key20>
+					<name>Vîatrîx</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Loomx</name>
+				</key22>
+				<key23>
+					<name>Mortala</name>
+				</key23>
+				<key24>
+					<name>Kyu</name>
+				</key24>
+				<key25>
+					<name>Lambock</name>
+				</key25>
+				<key26>
+					<name>Zooci</name>
+				</key26>
+				<key27>
+					<name>Neyana</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Rawberry</name>
+				</key29>
+				<key30>
+					<name>Dilios</name>
+				</key30>
+				<key31>
+					<name>Trepper</name>
+				</key31>
+				<key32>
+					<name>Krosa</name>
+				</key32>
+				<key33>
+					<name>Murazok</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key6>
+		<key7>
+			<name>Modermiene</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 20:42:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Zeromancer</name>
+				</key3>
+				<key4>
+					<name>Nosebud</name>
+				</key4>
+				<key5>
+					<name>Gandorar</name>
+				</key5>
+				<key6>
+					<name>Solokko</name>
+				</key6>
+				<key7>
+					<name>Alphacow</name>
+				</key7>
+				<key8>
+					<name>Saphakula</name>
+				</key8>
+				<key9>
+					<name>Britz</name>
+				</key9>
+				<key10>
+					<name>Lostmage</name>
+				</key10>
+				<key11>
+					<name>Monstanapfel</name>
+				</key11>
+				<key12>
+					<name>Illicit</name>
+				</key12>
+				<key13>
+					<name>Xmølol</name>
+				</key13>
+				<key14>
+					<name>Adoru</name>
+				</key14>
+				<key15>
+					<name>Bagor</name>
+				</key15>
+				<key16>
+					<name>Séràph</name>
+				</key16>
+				<key17>
+					<name>Zesto</name>
+				</key17>
+				<key18>
+					<name>Yiggsy</name>
+				</key18>
+				<key19>
+					<name>Errorqlzr</name>
+				</key19>
+				<key20>
+					<name>Vîatrîx</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Loomx</name>
+				</key22>
+				<key23>
+					<name>Mortala</name>
+				</key23>
+				<key24>
+					<name>Kyu</name>
+				</key24>
+				<key25>
+					<name>Lambock</name>
+				</key25>
+				<key26>
+					<name>Zooci</name>
+				</key26>
+				<key27>
+					<name>Neyana</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Rawberry</name>
+				</key29>
+				<key30>
+					<name>Dilios</name>
+				</key30>
+				<key31>
+					<name>Trepper</name>
+				</key31>
+				<key32>
+					<name>Krosa</name>
+				</key32>
+				<key33>
+					<name>Murazok</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key7>
+		<key8>
+			<name>Professor Seuchenmord</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 20:56:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Zeromancer</name>
+				</key3>
+				<key4>
+					<name>Gandorar</name>
+				</key4>
+				<key5>
+					<name>Solokko</name>
+				</key5>
+				<key6>
+					<name>Alphacow</name>
+				</key6>
+				<key7>
+					<name>Saphakula</name>
+				</key7>
+				<key8>
+					<name>Britz</name>
+				</key8>
+				<key9>
+					<name>Lostmage</name>
+				</key9>
+				<key10>
+					<name>Monstanapfel</name>
+				</key10>
+				<key11>
+					<name>Illicit</name>
+				</key11>
+				<key12>
+					<name>Xmølol</name>
+				</key12>
+				<key13>
+					<name>Lambock</name>
+				</key13>
+				<key14>
+					<name>Krosa</name>
+				</key14>
+				<key15>
+					<name>Bagor</name>
+				</key15>
+				<key16>
+					<name>Séràph</name>
+				</key16>
+				<key17>
+					<name>Zesto</name>
+				</key17>
+				<key18>
+					<name>Yiggsy</name>
+				</key18>
+				<key19>
+					<name>Errorqlzr</name>
+				</key19>
+				<key20>
+					<name>Vîatrîx</name>
+				</key20>
+				<key21>
+					<name>Jhados</name>
+				</key21>
+				<key22>
+					<name>Loomx</name>
+				</key22>
+				<key23>
+					<name>Mortala</name>
+				</key23>
+				<key24>
+					<name>Kyu</name>
+				</key24>
+				<key25>
+					<name>Nosebud</name>
+				</key25>
+				<key26>
+					<name>Zooci</name>
+				</key26>
+				<key27>
+					<name>Neyana</name>
+				</key27>
+				<key28>
+					<name>Ensky</name>
+				</key28>
+				<key29>
+					<name>Rawberry</name>
+				</key29>
+				<key30>
+					<name>Dilios</name>
+				</key30>
+				<key31>
+					<name>Trepper</name>
+				</key31>
+				<key32>
+					<name>Adoru</name>
+				</key32>
+				<key33>
+					<name>Murazok</name>
+				</key33>
+				<key34>
+					<name>Matek</name>
+				</key34>
+			</attendees>
+		</key8>
+		<key9>
+			<name>Der Lichkönig</name>
+			<difficulty>4</difficulty>
+			<time>10/24/10 21:56:00</time>
+			<attendees>
+				<key1>
+					<name>Boombox</name>
+				</key1>
+				<key2>
+					<name>Berzerkvladî</name>
+				</key2>
+				<key3>
+					<name>Lambock</name>
+				</key3>
+				<key4>
+					<name>Ensky</name>
+				</key4>
+				<key5>
+					<name>Britz</name>
+				</key5>
+				<key6>
+					<name>Yiggsy</name>
+				</key6>
+				<key7>
+					<name>Kyu</name>
+				</key7>
+				<key8>
+					<name>Bagor</name>
+				</key8>
+				<key9>
+					<name>Mortala</name>
+				</key9>
+				<key10>
+					<name>Piebald</name>
+				</key10>
+				<key11>
+					<name>Xmølol</name>
+				</key11>
+				<key12>
+					<name>Gandorar</name>
+				</key12>
+				<key13>
+					<name>Loomx</name>
+				</key13>
+				<key14>
+					<name>Neyana</name>
+				</key14>
+				<key15>
+					<name>Séràph</name>
+				</key15>
+				<key16>
+					<name>Zeromancer</name>
+				</key16>
+				<key17>
+					<name>Alphacow</name>
+				</key17>
+				<key18>
+					<name>Rawberry</name>
+				</key18>
+				<key19>
+					<name>Errorqlzr</name>
+				</key19>
+				<key20>
+					<name>Trepper</name>
+				</key20>
+				<key21>
+					<name>Illicit</name>
+				</key21>
+				<key22>
+					<name>Zesto</name>
+				</key22>
+				<key23>
+					<name>Nosebud</name>
+				</key23>
+				<key24>
+					<name>Zooci</name>
+				</key24>
+				<key25>
+					<name>Dilios</name>
+				</key25>
+				<key26>
+					<name>Jhados</name>
+				</key26>
+				<key27>
+					<name>Adoru</name>
+				</key27>
+				<key28>
+					<name>Lostmage</name>
+				</key28>
+				<key29>
+					<name>Vîatrîx</name>
+				</key29>
+				<key30>
+					<name>Monstanapfel</name>
+				</key30>
+				<key31>
+					<name>Saphakula</name>
+				</key31>
+				<key32>
+					<name>Krosa</name>
+				</key32>
+				<key33>
+					<name>Murazok</name>
+				</key33>
+				<key34>
+					<name>Solokko</name>
+				</key34>
+				<key35>
+					<name>Matek</name>
+				</key35>
+			</attendees>
+		</key9>
+	</BossKills>
+	<note><![CDATA[ - Zone: Eiskronenzitadelle]]></note>
+	<Join>
+		<key1>
+			<player>Boombox</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key1>
+		<key2>
+			<player>Zesto</player>
+			<race>Scourge</race>
+			<sex>2</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key2>
+		<key3>
+			<player>Yiggsy</player>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key3>
+		<key4>
+			<player>Alphacow</player>
+			<race>Tauren</race>
+			<sex>3</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key4>
+		<key5>
+			<player>Lostmage</player>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>MAGE</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key5>
+		<key6>
+			<player>Xmølol</player>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>WARLOCK</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key6>
+		<key7>
+			<player>Kyu</player>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key7>
+		<key8>
+			<player>Zeromancer</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key8>
+		<key9>
+			<player>Mortala</player>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key9>
+		<key10>
+			<player>Trepper</player>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key10>
+		<key11>
+			<player>Britz</player>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>WARLOCK</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key11>
+		<key12>
+			<player>Saphakula</player>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key12>
+		<key13>
+			<player>Neyana</player>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>SHAMAN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key13>
+		<key14>
+			<player>Zooci</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key14>
+		<key15>
+			<player>Vîatrîx</player>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key15>
+		<key16>
+			<player>Murazok</player>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key16>
+		<key17>
+			<player>Lambock</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key17>
+		<key18>
+			<player>Solokko</player>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>SHAMAN</class>
+			<level>0</level>
+			<time>10/24/10 18:43:00</time>
+		</key18>
+		<key19>
+			<player>Berzerkvladî</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>WARRIOR</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key19>
+		<key20>
+			<player>Cerfax</player>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key20>
+		<key21>
+			<player>Jhados</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key21>
+		<key22>
+			<player>Rawberry</player>
+			<race>BloodElf</race>
+			<sex>3</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key22>
+		<key23>
+			<player>Ensky</player>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key23>
+		<key24>
+			<player>Monstanapfel</player>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key24>
+		<key25>
+			<player>Bagor</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key25>
+		<key26>
+			<player>Adoru</player>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>0</level>
+			<time>10/24/10 18:43:00</time>
+		</key26>
+		<key27>
+			<player>Nosebud</player>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>ROGUE</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key27>
+		<key28>
+			<player>Dilios</player>
+			<race>BloodElf</race>
+			<sex>2</sex>
+			<class>PALADIN</class>
+			<level>0</level>
+			<time>10/24/10 18:43:00</time>
+		</key28>
+		<key29>
+			<player>Krosa</player>
+			<race>Orc</race>
+			<sex>3</sex>
+			<class>DEATHKNIGHT</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key29>
+		<key30>
+			<player>Gandorar</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key30>
+		<key31>
+			<player>Illicit</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key31>
+		<key32>
+			<player>Matek</player>
+			<race>Troll</race>
+			<sex>2</sex>
+			<class>MAGE</class>
+			<level>80</level>
+			<time>10/24/10 18:43:00</time>
+		</key32>
+		<key33>
+			<player>Xmølol</player>
+			<race>Scourge</race>
+			<sex>3</sex>
+			<class>WARLOCK</class>
+			<level>80</level>
+			<time>10/24/10 18:47:00</time>
+		</key33>
+		<key34>
+			<player>Errorqlzr</player>
+			<race>Orc</race>
+			<sex>3</sex>
+			<class>HUNTER</class>
+			<level>80</level>
+			<time>10/24/10 18:51:00</time>
+		</key34>
+		<key35>
+			<player>Séràph</player>
+			<race>Troll</race>
+			<sex>3</sex>
+			<class>PRIEST</class>
+			<level>80</level>
+			<time>10/24/10 18:51:00</time>
+		</key35>
+		<key36>
+			<player>Loomx</player>
+			<race>Tauren</race>
+			<sex>2</sex>
+			<class>DRUID</class>
+			<level>80</level>
+			<time>10/24/10 19:00:00</time>
+		</key36>
+		<key37>
+			<player>Errorqlzr</player>
+			<race>Orc</race>
+			<sex>3</sex>
+			<class>HUNTER</class>
+			<level>80</level>
+			<time>10/24/10 20:11:00</time>
+		</key37>
+		<key38>
+			<player>Piebald</player>
+			<race>Orc</race>
+			<sex>2</sex>
+			<class>HUNTER</class>
+			<level>80</level>
+			<time>10/24/10 21:36:00</time>
+		</key38>
+	</Join>
+	<Leave>
+		<key1>
+			<player>Boombox</player>
+			<time>10/24/10 22:05:00</time>
+		</key1>
+		<key2>
+			<player>Zesto</player>
+			<time>10/24/10 22:05:00</time>
+		</key2>
+		<key3>
+			<player>Yiggsy</player>
+			<time>10/24/10 22:05:00</time>
+		</key3>
+		<key4>
+			<player>Alphacow</player>
+			<time>10/24/10 22:05:00</time>
+		</key4>
+		<key5>
+			<player>Lostmage</player>
+			<time>10/24/10 22:05:00</time>
+		</key5>
+		<key6>
+			<player>Xmølol</player>
+			<time>10/24/10 18:47:00</time>
+		</key6>
+		<key7>
+			<player>Kyu</player>
+			<time>10/24/10 22:05:00</time>
+		</key7>
+		<key8>
+			<player>Zeromancer</player>
+			<time>10/24/10 22:05:00</time>
+		</key8>
+		<key9>
+			<player>Mortala</player>
+			<time>10/24/10 22:05:00</time>
+		</key9>
+		<key10>
+			<player>Trepper</player>
+			<time>10/24/10 22:05:00</time>
+		</key10>
+		<key11>
+			<player>Britz</player>
+			<time>10/24/10 22:05:00</time>
+		</key11>
+		<key12>
+			<player>Saphakula</player>
+			<time>10/24/10 22:05:00</time>
+		</key12>
+		<key13>
+			<player>Neyana</player>
+			<time>10/24/10 22:05:00</time>
+		</key13>
+		<key14>
+			<player>Zooci</player>
+			<time>10/24/10 22:05:00</time>
+		</key14>
+		<key15>
+			<player>Vîatrîx</player>
+			<time>10/24/10 22:05:00</time>
+		</key15>
+		<key16>
+			<player>Murazok</player>
+			<time>10/24/10 22:05:00</time>
+		</key16>
+		<key17>
+			<player>Lambock</player>
+			<time>10/24/10 22:05:00</time>
+		</key17>
+		<key18>
+			<player>Solokko</player>
+			<time>10/24/10 22:05:00</time>
+		</key18>
+		<key19>
+			<player>Berzerkvladî</player>
+			<time>10/24/10 22:05:00</time>
+		</key19>
+		<key20>
+			<player>Cerfax</player>
+			<time>10/24/10 19:31:00</time>
+		</key20>
+		<key21>
+			<player>Jhados</player>
+			<time>10/24/10 22:05:00</time>
+		</key21>
+		<key22>
+			<player>Rawberry</player>
+			<time>10/24/10 22:05:00</time>
+		</key22>
+		<key23>
+			<player>Ensky</player>
+			<time>10/24/10 22:05:00</time>
+		</key23>
+		<key24>
+			<player>Monstanapfel</player>
+			<time>10/24/10 22:05:00</time>
+		</key24>
+		<key25>
+			<player>Bagor</player>
+			<time>10/24/10 22:05:00</time>
+		</key25>
+		<key26>
+			<player>Adoru</player>
+			<time>10/24/10 22:05:00</time>
+		</key26>
+		<key27>
+			<player>Nosebud</player>
+			<time>10/24/10 22:05:00</time>
+		</key27>
+		<key28>
+			<player>Dilios</player>
+			<time>10/24/10 22:05:00</time>
+		</key28>
+		<key29>
+			<player>Krosa</player>
+			<time>10/24/10 22:05:00</time>
+		</key29>
+		<key30>
+			<player>Gandorar</player>
+			<time>10/24/10 22:05:00</time>
+		</key30>
+		<key31>
+			<player>Illicit</player>
+			<time>10/24/10 22:05:00</time>
+		</key31>
+		<key32>
+			<player>Matek</player>
+			<time>10/24/10 22:05:00</time>
+		</key32>
+		<key33>
+			<player>Xmølol</player>
+			<time>10/24/10 22:05:00</time>
+		</key33>
+		<key34>
+			<player>Errorqlzr</player>
+			<time>10/24/10 19:06:00</time>
+		</key34>
+		<key35>
+			<player>Séràph</player>
+			<time>10/24/10 22:05:00</time>
+		</key35>
+		<key36>
+			<player>Loomx</player>
+			<time>10/24/10 22:05:00</time>
+		</key36>
+		<key37>
+			<player>Errorqlzr</player>
+			<time>10/24/10 22:05:00</time>
+		</key37>
+		<key38>
+			<player>Piebald</player>
+			<time>10/24/10 22:05:00</time>
+		</key38>
+	</Leave>
+	<Loot>
+		<key1>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:09:01</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lord Mark'gar</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lord Mark'gar - 0 DKP]]></Note>
+		</key1>
+		<key2>
+			<ItemName>Band des Knochenkolosses</ItemName>
+			<ItemID>50604:0:0:0:0:0:0:700587968:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:09:02</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lord Mark'gar</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lord Mark'gar - 0 DKP]]></Note>
+		</key2>
+		<key3>
+			<ItemName>Beinschützer der verlorenen Hoffnung</ItemName>
+			<ItemID>50612:0:0:0:0:0:0:969023424:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Zeromancer</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:09:03</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lord Mark'gar</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lord Mark'gar - 0 DKP]]></Note>
+		</key3>
+		<key4>
+			<ItemName>Zerschmetternder Eisgespenstergürtel</ItemName>
+			<ItemID>50613:0:0:0:0:0:0:1237458880:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Xmølol</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:09:04</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lord Mark'gar</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lord Mark'gar - 0 DKP]]></Note>
+		</key4>
+		<key5>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:05</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key5>
+		<key6>
+			<ItemName>Molochband</ItemName>
+			<ItemID>50642:0:0:0:0:0:0:1517355392:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Murazok</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:06</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key6>
+		<key7>
+			<ItemName>Schultern des Gnadentods</ItemName>
+			<ItemID>50643:0:0:0:0:0:0:1785790848:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Britz</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:07</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key7>
+		<key8>
+			<ItemName>Brüchige Armschienen der Lady</ItemName>
+			<ItemID>50651:0:0:0:0:0:0:2054226304:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Xmølol</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:08</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key8>
+		<key9>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:09</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key9>
+		<key10>
+			<ItemName>Kreis des Skelettfürsten</ItemName>
+			<ItemID>50657:0:0:0:0:0:0:1739854592:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Monstanapfel</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:10</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key10>
+		<key11>
+			<ItemName>Amulett der lautlosen Euloge</ItemName>
+			<ItemID>50658:0:0:0:0:0:0:2008290048:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Xmølol</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:11</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key11>
+		<key12>
+			<ItemName>Stiefel des unnatürlichen Wachstums</ItemName>
+			<ItemID>50665:0:0:0:0:0:0:-2018241792:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:18:12</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Lady Todeswisper</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Lady Todeswisper - 0 DKP]]></Note>
+		</key12>
+		<key13>
+			<ItemName>Toskks maximierte Handgelenksschützer</ItemName>
+			<ItemID>50670:0:0:0:0:0:0:576859360:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:13</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key13>
+		<key14>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:14</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key14>
+		<key15>
+			<ItemName>Weiheabzeichen des Eroberers</ItemName>
+			<ItemID>52030:0:0:0:0:0:0:845294816:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Trepper</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:15</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key15>
+		<key16>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:16</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key16>
+		<key17>
+			<ItemName>Verbund des Eisigen Gespenstes</ItemName>
+			<ItemID>50620:0:0:0:0:0:0:1645788160:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:17</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key17>
+		<key18>
+			<ItemName>Großstiefel des grinsenden Schädels</ItemName>
+			<ItemID>50625:0:0:0:0:0:0:1914223616:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Murazok</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:18</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key18>
+		<key19>
+			<ItemName>Zerfetztes Cape des Frostbinders</ItemName>
+			<ItemID>50628:0:0:0:0:0:0:-2112308224:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Xmølol</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:19</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key19>
+		<key20>
+			<ItemName>Gamaschen der zweifelhaften Reize</ItemName>
+			<ItemID>50450:0:0:0:0:0:0:1559395584:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Ensky</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 19:37:20</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Todesbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Todesbringer Saurfang - 0 DKP]]></Note>
+		</key20>
+		<key21>
+			<ItemName>Sonnenuhr der ewigen Abenddämmerung</ItemName>
+			<ItemID>50635:0:0:0:0:0:0:-1690418560:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Ensky</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:21</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key21>
+		<key22>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52025:0:0:0:0:0:0:-1153547648:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:22</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key22>
+		<key23>
+			<ItemName>Weiheabzeichen des Beschützers</ItemName>
+			<ItemID>52026:0:0:0:0:0:0:-885112192:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:23</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key23>
+		<key24>
+			<ItemName>Weiheabzeichen des Beschützers</ItemName>
+			<ItemID>52029:0:0:0:0:0:0:-1421983104:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Neyana</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:24</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key24>
+		<key25>
+			<ItemName>Keleseths Verführer</ItemName>
+			<ItemID>50710:0:0:0:0:0:0:541367456:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Saphakula</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:25</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key25>
+		<key26>
+			<ItemName>Valanars anderer Siegelring</ItemName>
+			<ItemID>50714:0:0:0:0:0:0:809802912:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Xmølol</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:26</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key26>
+		<key27>
+			<ItemName>Schattenseidenspindel</ItemName>
+			<ItemID>50719:0:0:0:0:0:0:1078238368:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Britz</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:07:27</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Sindragosa</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Sindragosa - 0 DKP]]></Note>
+		</key27>
+		<key28>
+			<ItemName>Verlöschendes Licht</ItemName>
+			<ItemID>50725:0:0:0:0:0:0:1685687552:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Jhados</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:25:28</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Blutkönigin Lana'thel</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Blutkönigin Lana'thel - 0 DKP]]></Note>
+		</key28>
+		<key29>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52028:0:0:0:0:0:0:1954123008:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Loomx</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:25:29</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Blutkönigin Lana'thel</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Blutkönigin Lana'thel - 0 DKP]]></Note>
+		</key29>
+		<key30>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52025:0:0:0:0:0:0:-2072408832:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:25:30</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Blutkönigin Lana'thel</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Blutkönigin Lana'thel - 0 DKP]]></Note>
+		</key30>
+		<key31>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52025:0:0:0:0:0:0:-1803973376:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:25:31</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Blutkönigin Lana'thel</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Blutkönigin Lana'thel - 0 DKP]]></Note>
+		</key31>
+		<key32>
+			<ItemName>Knochenpanzer der vergessenen Könige</ItemName>
+			<ItemID>50689:0:0:0:0:0:0:648414464:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Saphakula</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:37:32</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Fauldarm</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Fauldarm - 0 DKP]]></Note>
+		</key32>
+		<key33>
+			<ItemName>Gangranöse Gamaschen</ItemName>
+			<ItemID>50697:0:0:0:0:0:0:916849920:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:37:33</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Fauldarm</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Fauldarm - 0 DKP]]></Note>
+		</key33>
+		<key34>
+			<ItemName>Gesichtsschutz des Vergessenen</ItemName>
+			<ItemID>50701:0:0:0:0:0:0:1185285376:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:37:34</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Fauldarm</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Fauldarm - 0 DKP]]></Note>
+		</key34>
+		<key35>
+			<ItemName>Schattenfrostsplitter</ItemName>
+			<ItemID>50274:0:0:0:0:0:0:1505894336:80:0</ItemID>
+			<Color>ffff8000</Color>
+			<Count>1</Count>
+			<Player>Adoru</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:42:35</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Modermiene</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Modermiene - 0 DKP]]></Note>
+		</key35>
+		<key36>
+			<ItemName>Aldrianas Handschuhe der Geheimhaltung</ItemName>
+			<ItemID>50675:0:0:0:0:0:0:907676288:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:42:36</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Modermiene</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Modermiene - 0 DKP]]></Note>
+		</key36>
+		<key37>
+			<ItemName>Siegel der vielen Münder</ItemName>
+			<ItemID>50678:0:0:0:0:0:0:1176111744:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Saphakula</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:42:37</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Modermiene</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Modermiene - 0 DKP]]></Note>
+		</key37>
+		<key38>
+			<ItemName>Trauma</ItemName>
+			<ItemID>50685:0:0:0:0:0:0:1444547200:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Saphakula</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:42:38</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Modermiene</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Modermiene - 0 DKP]]></Note>
+		</key38>
+		<key39>
+			<ItemName>Das letzte Wort</ItemName>
+			<ItemID>50708:0:0:0:0:0:0:880576960:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchant</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:56:39</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Professor Seuchenmord</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Professor Seuchenmord - 0 DKP]]></Note>
+		</key39>
+		<key40>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52028:0:0:0:0:0:0:1149012416:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Zesto</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 20:56:40</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Professor Seuchenmord</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Professor Seuchenmord - 0 DKP]]></Note>
+		</key40>
+		<key41>
+			<ItemName>Unbesiegbars Zügel</ItemName>
+			<ItemID>50818:0:0:0:0:0:0:281390470:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Mortala</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:41</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key41>
+		<key42>
+			<ItemName>Himmelsfall, Kris der tausend Lügen</ItemName>
+			<ItemID>50736:0:0:0:0:0:0:549825926:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Zesto</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:42</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key42>
+		<key43>
+			<ItemName>Himmelsfall, Kris der tausend Lügen</ItemName>
+			<ItemID>50736:0:0:0:0:0:0:818261382:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Zesto</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:43</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key43>
+		<key44>
+			<ItemName>Weiheabzeichen des Eroberers</ItemName>
+			<ItemID>52027:0:0:0:0:0:0:1355132294:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:44</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key44>
+		<key45>
+			<ItemName>Weiheabzeichen des Eroberers</ItemName>
+			<ItemID>52027:0:0:0:0:0:0:1623567750:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Boombox</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:45</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key45>
+		<key46>
+			<ItemName>Weiheabzeichen des Bezwingers</ItemName>
+			<ItemID>52028:0:0:0:0:0:0:1086696838:80:0</ItemID>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Matek</Player>
+			<Costs>0</Costs>
+			<Time>10/24/10 21:56:46</Time>
+			<Difficulty>4</Difficulty>
+			<Boss>Der Lichkönig</Boss>
+			<Note><![CDATA[ - Zone: Eiskronenzitadelle - Boss: Der Lichkönig - 0 DKP]]></Note>
+		</key46>
+	</Loot>
+</RaidInfo>

@@ -1,0 +1,32 @@
+<?php 
+
+require_once(dirname(__FILE__) .'/nprt.utils.inc');
+
+function nprt_perm() {
+  return array('access nprt', 'administer nprt');
+} 
+
+function nprt_menu(){
+	$items = array();
+	$items['raids'] = array(
+		'title' => 'Nextpls Raidtracker',
+		'description' => 'Nextpls Raidtracker helps you to track your Raids.',
+		'access arguments' => array('access content'),
+		'file'	=> 'nprt.pages.inc',
+		'page callback' => 'nprt_page',
+	);
+	$items['admin/settings/nprt'] = array(
+	    'title' => 'Nextpls Raidtracker',
+	    'description' => 'Nextpls Raidtracker Administration.',
+	    'page arguments' => array('nprt_admin_list'),
+		'page callback' => 'nprt_admin_list',
+	    'access arguments' => array('administer nprt'),
+	    'file' => 'nprt.admin.inc',
+  	);
+   	$items['admin/settings/nprt/raids'] = array(
+	    'title' => 'Overview',
+	    'type' => MENU_DEFAULT_LOCAL_TASK,
+	    'weight' => -10,
+  	);
+	return $items;
+}

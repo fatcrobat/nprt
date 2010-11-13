@@ -1,0 +1,4 @@
+name = Core
+description = A World of Warcraft Raid Raidtracker for Drupal.
+core = 6.x
+package = nprt

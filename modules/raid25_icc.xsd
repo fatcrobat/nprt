@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="raidinfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="version"/>
+        <xs:element ref="start"/>
+        <xs:element ref="end"/>
+        <xs:element ref="realm"/>
+        <xs:element ref="zone"/>
+        <xs:element ref="difficulty"/>
+        <xs:element ref="exporter"/>
+        <xs:element ref="playerinfos"/>
+        <xs:element ref="bosskills"/>
+        <xs:element ref="wipes"/>
+        <xs:element ref="nextboss"/>
+        <xs:element ref="joins"/>
+        <xs:element ref="leaves"/>
+        <xs:element ref="loots"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="version" type="xs:decimal"/>
+  <xs:element name="start" type="xs:integer"/>
+  <xs:element name="end" type="xs:integer"/>
+  <xs:element name="realm" type="xs:string"/>
+  <xs:element name="exporter" type="xs:NCName"/>
+  <xs:element name="playerinfos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="player"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bosskills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="bosskill"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bosskill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="time"/>
+        <xs:element ref="difficulty"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wipes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="wipe"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wipe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nextboss" type="xs:string"/>
+  <xs:element name="joins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="join"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="join">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="leaves">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="leave"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="leave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="player"/>
+        <xs:element ref="time"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="loot"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="itemname"/>
+        <xs:element ref="itemid"/>
+        <xs:element ref="count"/>
+        <xs:element ref="player"/>
+        <xs:element ref="time"/>
+        <xs:element ref="difficulty"/>
+        <xs:element ref="zone"/>
+        <xs:element ref="boss"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="itemname" type="xs:string"/>
+  <xs:element name="itemid" type="xs:NMTOKEN"/>
+  <xs:element name="count" type="xs:integer"/>
+  <xs:element name="boss" type="xs:string"/>
+  <xs:element name="zone" type="xs:string"/>
+  <xs:element name="difficulty" type="xs:integer"/>
+  <xs:element name="player">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="name"/>
+        <xs:element ref="class"/>
+        <xs:element ref="guild"/>
+        <xs:element ref="level"/>
+        <xs:element ref="race"/>
+        <xs:element ref="sex"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="class" type="xs:integer"/>
+  <xs:element name="guild" type="xs:string"/>
+  <xs:element name="level" type="xs:integer"/>
+  <xs:element name="race" type="xs:integer"/>
+  <xs:element name="sex" type="xs:integer"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="time" type="xs:integer"/>
+</xs:schema>
