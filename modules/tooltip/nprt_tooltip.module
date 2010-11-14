@@ -1,0 +1,98 @@
+<?php 
+
+
+function nprt_tooltip_menu(){
+	$items = array();
+	$items['tooltip/%'] = array(
+		'title' => 'WoW Tooltip',
+		'description' => 'Display fancy item Tooltips.',
+		'page callback' => 'nprt_tooltip_page',
+		'page arguments'	=>	array(1),
+		'access arguments' => array('access content'),
+		'type' => MENU_LOCAL_TASK,
+	);
+	return $items;
+}
+
+
+function nprt_tooltip_theme() {
+   return array(
+      'nprt_tooltip_javascript' => array(
+         'arguments' => array(),
+      ),
+      'nprt_tooltip_stylesheet' => array(
+         'arguments' => array(),
+      ),
+   );   
+}
+
+function nprt_tooltip_init() {
+  theme('nprt_tooltip_javascript');
+  theme('nprt_tooltip_stylesheet');
+}
+
+function theme_nprt_tooltip_javascript() {
+	drupal_add_js(drupal_get_path('module', 'nprt_tooltip') . '/js/jquery.qtip-1.0.0-rc3.min.js');
+	drupal_add_js(drupal_get_path('module', 'nprt_tooltip') . '/js/nprt.tooltip.js');
+}
+
+function theme_nprt_tooltip_stylesheet(){
+	drupal_add_css(drupal_get_path('module', 'nprt_tooltip') . '/css/tooltip.css');
+}
+
+
+/**
+ * TODO: PUT URLS AND LOCATIONS IN VARIABLES 
+ * @param unknown_type $item
+ */
+
+function nprt_tooltip_fetchtips($item=50604){
+	define("USE_CURL", true);
+	$url = "http://eu.wowarmory.com/item-tooltip.xml?i=".$item;
+	$data = nprt_tooltip_fetchXML($url);
+	$location = file_directory_path().'/nprt/tooltips/item-tooltip-'.$item.'.xml';
+	$xml = file_save_data($data, $location, FILE_EXISTS_REPLACE);
+	$doc = simplexml_load_string($data);
+	$icon = $doc->xpath('//itemTooltip/icon');
+	$iconurl = 'http://eu.wowarmory.com/wow-icons/_images/64x64/'.$icon[0].'.jpg';
+	$iconlocation = file_directory_path().'/nprt/tooltips/icons/64x64/'.$icon[0].'.jpg';
+	$iconfile = file_save_data(nprt_tooltip_fetchXML($iconurl), $iconlocation, FILE_EXISTS_REPLACE);
+	$quality = $doc->xpath('//itemTooltip/overallQualityId');
+	return array('icon' => $icon[0], 'quality' => $quality[0]);
+}
+
+function nprt_tooltip_page($item){
+	$file = file_directory_path().'/nprt/tooltips/item-tooltip-'.$item.'.xml';
+	$xml = new DOMDocument;
+	$xml->load($file);
+	$xslfile = drupal_get_path('module', 'nprt_tooltip').'/xml/tooltip.xsl';
+	$xsl = new DOMDocument;
+	$xsl->load($xslfile);
+	$proc = new XSLTProcessor;
+	$proc->importStyleSheet($xsl); // attach the xsl rules
+	print $proc->transformToXML($xml);
+}
+
+//fetches an xml document using the cURL library
+function nprt_tooltip_fetchXML($url){
+	//initialize library
+	$ch = curl_init();
+	//used to make us look like a browser
+	$useragent="Mozilla/5.0 (Windows; U; Windows NT 6.1; de; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12";
+	//used to make us look like browsing from germany
+	$header[] = 'Accept-Language: de-de';
+	//set the url
+	curl_setopt ($ch, CURLOPT_URL, $url);
+	//set that we want to wait for a response
+	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+	//make us look like a web browser
+	curl_setopt ($ch, CURLOPT_USERAGENT, $useragent);
+	//set language to german
+	curl_setopt ($ch, CURLOPT_HTTPHEADER, $header);
+	//get data
+	$data = curl_exec($ch);
+	//clean up
+	curl_close($ch);
+	///return xml data
+	return $data;
+}

@@ -3,11 +3,18 @@
 function nprt_parser_menu(){
 	$items = array();
 	$items['admin/settings/nprt/add'] = array(
-		'title' => 'Add Raid',
+		'title' => 'Import',
 		'description' => 'Nextpls XML Parser for Importing Raid Date.',
 		'page callback' => 'drupal_get_form',
 		'access arguments' => array('administer wowprogress'),
 		'page arguments' => array('nprt_parser_add_raid_form'),
+		'type' => MENU_LOCAL_TASK,
+	);
+	$items['admin/settings/nprt/items'] = array(
+		'title' => 'Tooltips',
+		'description' => 'Update Item Tooltips, fetched from Wow-Armory.',
+		'page callback' => 'nprt_parser_update_itemtooltips',
+		'access arguments' => array('administer wowprogress'),
 		'type' => MENU_LOCAL_TASK,
 	);
 	return $items;
@@ -15,25 +22,12 @@ function nprt_parser_menu(){
 
 function nprt_parser_add_raid_form(&$form_state){
 	// XML Input has to surrounded in CDATA, otherwise Tags get stripped.
-	drupal_add_js('
-		Drupal.behaviors.nprtxmlcdata = function (context){
-			var $f = $(context).find("#nprt-parser-add-raid-form");
-			var $xml = $(context).find("textarea[name=xml]");
-			$(context).ready(function(){
-				$xml.val("");
-			});
-			$f.submit(function(){
-				var data = $xml.val();
-				var encoded = data.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-				$xml.val(encoded);
-			});
-		};'
-		,'inline');
+	drupal_add_js(drupal_get_path('module', 'nprt') . '/js/nprt.js');
 	$form = array();
 	$form['#attributes'] = array('enctype' => 'multipart/form-data');
 	$form['upload'] = array(
 		'#type'			=>	'fieldset',
-		'#title'		=>	t('Raid Informations'),
+		'#title'		=>	t('Import Raid'),
 		'#collapsible'	=>	true,
 		'#collapsed'	=>	false,		
 	);
@@ -86,7 +80,7 @@ function nprt_get_xml_content($xml){
 	$output = array(
 		'zone' 		=> $raid->xpath('zone'), // raiding zon (icc, bwl etc)
 		'players'	=> $raid->xpath('//playerinfos/player'), // array of players attending the raid
-		'loots' 	=> $raid->xpath('//loots/loot/player/parent::*'), // discard disenchanted items
+		'loots' 	=> $raid->xpath('//loots/loot/player[. != \'disenchanted\']/parent::*'), // discard disenchanted items
 		'kills' 	=> $raid->xpath('//bosskills/bosskill'), // get all bosskills
 		'reporter'	=> $raid->xpath('exporter'), // name of the reporting player
 		'start' 	=> $raid->xpath('start'),
@@ -131,6 +125,12 @@ function nprt_parser_loot($loots, $raidid){
 			$restype = db_affected_rows($result);
 			if($restype ==  1){ // Insert
 				drupal_set_message(t('Item: %itemid - %itemname successfully inserted into Database.', array('%itemid' => $itemid, '%itemname' => $loot->itemname)), 'status');
+				if(module_exists('nprt_tooltip')){
+					$iteminfo = nprt_tooltip_fetchtips($itemid);
+					db_query(	"UPDATE {nprt_item} ".
+								"SET quality = %d, icon = '%s' ".
+								"WHERE id=%d", $iteminfo['quality'], $iteminfo['icon'], $itemid);
+				}
 			}else if($restype == 2){  // Nothing Updated/Inserted for this Entry
 				// TODO: Message handling (Watchdog??)
 			}else if($restype == 3){ // Update

@@ -1,0 +1,5 @@
+name = Tooltips
+description = Fetch Tooltips from WoWArmory, and save xml and images locally.
+core = 6.x
+dependencies[] = nprt
+package = nprt

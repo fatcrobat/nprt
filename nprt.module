@@ -15,11 +15,16 @@ function nprt_menu(){
 		'file'	=> 'nprt.pages.inc',
 		'page callback' => 'nprt_page',
 	);
+	$items['raids/attendance'] = array(
+	    'type' => MENU_DEFAULT_LOCAL_TASK,
+	    'title' => t('Attendance'),
+	    'weight' => -10,
+  	);
 	$items['admin/settings/nprt'] = array(
 	    'title' => 'Nextpls Raidtracker',
 	    'description' => 'Nextpls Raidtracker Administration.',
-	    'page arguments' => array('nprt_admin_list'),
-		'page callback' => 'nprt_admin_list',
+	    'page arguments' => array('nprt_admin_report_imported_raids_form'),
+		'page callback' => 'drupal_get_form',
 	    'access arguments' => array('administer nprt'),
 	    'file' => 'nprt.admin.inc',
   	);
@@ -28,5 +33,35 @@ function nprt_menu(){
 	    'type' => MENU_DEFAULT_LOCAL_TASK,
 	    'weight' => -10,
   	);
+  	$items['admin/nprt/raidinfo/get/%'] = array(
+        'access arguments' => array('administer nprt'),
+  		'page arguments' => array('nprt_admin_report_raidinfo', 1),
+  		'page callback' => 'nprt_admin_report_raidinfo',
+  		'type' => MENU_CALLBACK,
+  		'file' => 'nprt.admin.inc',
+    );
 	return $items;
+}
+
+ 
+function nprt_theme() {
+   return array(
+      'nprt_raidinfo_javascript' => array(
+         'arguments' => array(),
+      ),
+      'nprt_ajax' => array(
+      		'template' => 'ajax',
+      		'arguments' => array(
+        		'content' => NULL,
+      	),
+      ),
+   );   
+}
+
+function nprt_init() {
+  theme('nprt_raidinfo_javascript');
+}
+
+function theme_nprt_raidinfo_javascript() {
+  //drupal_set_html_head('<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>');
 }
