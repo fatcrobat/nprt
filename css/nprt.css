@@ -1,0 +1,94 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #095360;
+	border: 1px solid #A6BBBC;
+	font-size: 8pt;
+	padding: 4px;
+	color: #fff;
+	
+}
+table.tablesorter thead tr .header {
+	background-image: url(../px/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #282A2C;
+	padding: 4px;
+	background-color: #c0cecf;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#A6BBBC;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../px/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../px/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+	background-color: #538890;
+}
+
+table.tablesorter tr{
+	border-bottom: 1px solid #b3cbce;
+}
+
+.tablesortpager .control{
+	float: right;
+}
+
+.tablesortpager .control a{
+	background-color:#095360;
+	border:1px solid #A6BBBC;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	font-size:0.875em;
+	height:20px;
+	line-height:18px;
+	margin:0 0 0 2px;
+	text-align:center;
+	text-decoration:none;
+	width:20px;
+}
+
+.tablesortpager .control a:hover{
+	background-color:#538890;
+}
+
+.tablesortpager .pagesize-wrapper{
+	float: left;
+}
+
+.tablesortpager .pagesize-wrapper select{
+	width: 80px;
+	margin-left: 5px;
+}
+
+.tablesortpager input.pagedisplay{
+	width: 20px;
+	text-align: center;
+}
+
+.tablesortpager span.pagecount{
+	margin-right: 20px;
+}
+
+.tablesortpager #filter-box{
+	margin: 0 5px;
+}
+
+.tablesortpager #filter-clear-button{
+	font-size: 0.9em;
+}

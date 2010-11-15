@@ -56,8 +56,6 @@ function nprt_parser_add_raid_form_submit($form, &$form_state){
 		nprt_parser_player_update($raid['players']);
 		$players= nprt_parser_loot($raid['loots'], $id);
 		nprt_parser_raid_attendees($players, $raid['players'], $id);
-	}else{
-		drupal_set_message(t('The imported XML doesn\'t\ match XSD Schema.'), 'error');
 	}
 }
 
@@ -68,12 +66,20 @@ function nprt_parser_add_raid_form_submit($form, &$form_state){
  */
 function nprt_parser_validate($xml, $xsd){
 	$doc = new DOMDocument();
-	$doc->load($xml);  
-	if($doc->schemaValidate($xsd)){
-		return true;
+	if (@$doc->load($xml) === false){
+		drupal_set_message(t('The inserted Data doesn\'t contain valid XML.'), 'error');
+		return false;
+	}else{
+		if($doc->schemaValidate($xsd)){
+			return true;
+		}else{
+			drupal_set_message(t('The inserted XML doesn\'t\ match XSD Schema.'), 'error');
+			return false;
+		}
 	}
-	return false;
 }
+
+
 
 function nprt_get_xml_content($xml){
 	$raid = new SimpleXMLElement($xml,null,true); // xml object holding all data in
@@ -138,8 +144,8 @@ function nprt_parser_loot($loots, $raidid){
 			}else{
 				drupal_set_message(t('Item: %itemid - %itemname failed while loading into database.', array('%itemid' => $itemid, '%itemname' => $loot->itemname)), 'error');
 			}
-			$result = db_query( "INSERT INTO {nprt_player_item} (raid_id, player_id, item_id)".
-								"VALUES (%d, %d, %d)", $raidid, array_search($loot->player, $players), $itemid);				
+			$result = db_query( "INSERT INTO {nprt_player_item} (raid_id, player_id, item_id, boss)".
+								"VALUES (%d, %d, %d, '%s')", $raidid, array_search($loot->player, $players), $itemid, $loot->boss);				
 		}
 	}
 	return $players;
@@ -206,4 +212,20 @@ function nprt_parser_raid_insert($zone, $start, $end, $reporter){
 							'warning');				
 	}
 	return $id;
+}
+
+function nprt_parser_theme() {
+   return array(
+      'nprt_parser_javascript' => array(
+         'arguments' => array(),
+      ),
+   );   
+}
+
+function nprt_parser_init() {
+  theme('nprt_parser_javascript');
+}
+
+function theme_nprt_parser_javascript() {
+  drupal_add_js(drupal_get_path('module', 'nprt_parser').'/js/nprt_parser.js');
 }

@@ -1,12 +1,9 @@
-Drupal.behaviors.nprtxmlcdata = function (context){
-	var $f = $(context).find("#nprt-parser-add-raid-form");
-	var $xml = $(context).find("textarea[name=xml]");
-	$(context).ready(function(){
-		$xml.val("");
-	});
-	$f.submit(function(){
-		var data = $xml.val();
-		var encoded = data.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-		$xml.val(encoded);
-	});
+Drupal.behaviors.nprtinit = function(context){
+	 $("#loots")
+	 .tablesorter({debug: false, widgets: ['zebra'], sortList: [[4,1],[0,0]]})
+	 .tablesorterPager({container: $("#pager"), positionFixed: false, size: 25})
+     .tablesorterFilter({filterContainer: $("#filter-box"),
+         filterClearContainer: $("#filter-clear-button"),
+         filterColumns: [0,1,2,3],
+         filterCaseSensitive: false});
 };

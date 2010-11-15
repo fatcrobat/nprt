@@ -112,14 +112,12 @@
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="name"/>
         <xs:element ref="class"/>
-        <xs:element ref="guild"/>
         <xs:element ref="race"/>
         <xs:element ref="sex"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
   <xs:element name="class" type="xs:integer"/>
-  <xs:element name="guild" type="xs:string"/>
   <xs:element name="race" type="xs:integer"/>
   <xs:element name="sex" type="xs:integer"/>
   <xs:element name="name" type="xs:string"/>

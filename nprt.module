@@ -9,17 +9,27 @@ function nprt_perm() {
 function nprt_menu(){
 	$items = array();
 	$items['raids'] = array(
-		'title' => 'Nextpls Raidtracker',
+		'title' => t('Raids'),
 		'description' => 'Nextpls Raidtracker helps you to track your Raids.',
-		'access arguments' => array('access content'),
+		'access arguments' => array('access nprt'),
 		'file'	=> 'nprt.pages.inc',
-		'page callback' => 'nprt_page',
+		'page callback' => 'nprt_attendance_page',
+		'type' => MENU_NORMAL_ITEM,
 	);
-	$items['raids/attendance'] = array(
-	    'type' => MENU_DEFAULT_LOCAL_TASK,
+	$items['raids/info'] = array(
 	    'title' => t('Attendance'),
-	    'weight' => -10,
+		'description' => 'Show Latest Loots.',
+		'type' => MENU_DEFAULT_LOCAL_TASK,
   	);
+	$items['raids/items'] = array(
+	    'title' => t('Loots'),
+		'description' => 'Show Latest Loots.',
+		'page callback' => 'nprt_player_items_page',
+		'access arguments' => array('access nprt'),
+		'type' => MENU_LOCAL_TASK,
+		'file'	=> 'nprt.pages.inc',
+  	);
+
 	$items['admin/settings/nprt'] = array(
 	    'title' => 'Nextpls Raidtracker',
 	    'description' => 'Nextpls Raidtracker Administration.',
@@ -46,7 +56,10 @@ function nprt_menu(){
  
 function nprt_theme() {
    return array(
-      'nprt_raidinfo_javascript' => array(
+      'nprt_javascript' => array(
+         'arguments' => array(),
+      ),
+      'nprt_stylesheet' => array(
          'arguments' => array(),
       ),
       'nprt_ajax' => array(
@@ -55,13 +68,51 @@ function nprt_theme() {
         		'content' => NULL,
       	),
       ),
+      'tablesort_pager' => array(
+      	'arguments'	=>	array()
+      ),
    );   
 }
 
 function nprt_init() {
-  theme('nprt_raidinfo_javascript');
+  theme('nprt_javascript');
+  theme('nprt_stylesheet');
 }
 
-function theme_nprt_raidinfo_javascript() {
-  //drupal_set_html_head('<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>');
+function theme_nprt_javascript() {
+  drupal_add_js(drupal_get_path('module', 'nprt').'/js/jquery.tablesorter.min.js');
+  drupal_add_js(drupal_get_path('module', 'nprt').'/js/jquery.tablesorter.pager.js');
+  drupal_add_js(drupal_get_path('module', 'nprt').'/js/jquery.tablesorter.filter.js');
+  drupal_add_js(drupal_get_path('module', 'nprt').'/js/nprt.js');
+}
+
+function theme_nprt_stylesheet() {
+  drupal_add_css(drupal_get_path('module', 'nprt').'/css/nprt.css');
+}
+
+function theme_tablesort_pager(){
+	$output  = '<div id="pager"  class="tablesortpager">';
+	$output .= '<form>';
+	$output .= '<div class="control">';
+	$output .= '<div class="pagesize-wrapper">';
+	$output .= '<label for="pagesize">'.t('Results per page').'</label>';
+	$output .= '<select name="pagesize" class="pagesize">';
+	$output .= '<option selected="selected"  value="25">25</option>';
+	$output .= '<option value="30">30</option>';
+	$output .= '<option value="40">40</option>';
+	$output .= '<option  value="50">50</option>';
+	$output .= '</select>';
+	$output .= '</div>';
+	$output .= '<a href="javascript:void(0);" class="first">&lsaquo;&lsaquo;</a>';
+	$output .= '<a href="javascript:void(0);" class="prev">&lsaquo;</a>';
+	$output .= '<a href="javascript:void(0);" class="next">&rsaquo;</a>';
+	$output .= '<a href="javascript:void(0);" class="last">&rsaquo;&rsaquo;</a>';
+	$output .= '</div>';
+	$output .= '<label>'.t('Page').'</label><input class="pagedisplay" type="text" />'.t('of').' <span class="pagecount"></span>';
+	$output .= t('Search').'<input name="filter" id="filter-box" value="" maxlength="20" size="20" type="text">';
+	$output .= '<a href="javascript:void(0);" id="filter-clear-button" class="btn green"><span>'.t('clear').'</span></a>';
+	$output .= '</form>';
+	$output .= '<div class="count"></div>';
+	$output .= '</div>';
+	return $output;
 }

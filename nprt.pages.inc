@@ -1,12 +1,6 @@
 <?php 
 
-function nprt_page(){
-	$output  = nprt_player_items();
-	$output .= nprt_attendance(); 
-	return $output;
-}
-
-function nprt_attendance(){
+function nprt_attendance_page(){
 	//timer_start('1');
 	$tables = array();
 	$head = array(
@@ -35,36 +29,39 @@ function nprt_attendance(){
 	return theme('item_list', $tables);
 }
 
-function nprt_player_items(){
+function nprt_player_items_page(){
 	$table = array();
 	$head = array(
-				array('data' => t('Item'), 'field' => 'name'),
-				array('data' => t('Zone'), 'field' => 'zone'),
-				array('data' => t('Boss'), 'field' => 'boss'),
-				array('data' => t('Player'), 'field' => 'player'),
+				array('data' => t('Item')),
+				array('data' => t('Zone')),
+				array('data' => t('Boss')),
+				array('data' => t('Player')),
+				array('data' => t('Date')),
 			);
 			
 	$drops = array();
 	
-	$sql = 	"SELECT COUNT(i.id) as amount, i.*, p.name as player FROM {nprt_player_item} pi ".
-			"LEFT JOIN {nprt_player} p on p.id=pi.player_id ".
-			"LEFT JOIN {nprt_item} i on i.id=pi.item_id ".
-			"GROUP BY i.id, p.name";
+	$sql = 	"SELECT i.*, pi.boss as itemboss, r.start as date, p.name AS player FROM {nprt_player_item} pi ".
+			"LEFT JOIN {nprt_player} p ON p.id=pi.player_id ".
+			"LEFT JOIN {nprt_item} i ON i.id=pi.item_id AND i.boss=pi.boss ".
+			"LEFT JOIN {nprt_raid} r ON r.id=pi.raid_id";
 	// Number of records to show per page.
-	$count = 5;
 	
-	$res = db_query($sql . tablesort_sql($head));
+	$res = db_query($sql);
 	
 	while($row = db_fetch_object($res)){
-		$amount = '';
-		if($row->amount > 1) $amount = $row->amount.'x&nbsp;';
+//		$amount = '';
+//		if($row->amount > 1) $amount = $row->amount.'x&nbsp;';
 		$drops[] = array(
-			'name'		=>	'<a href="javascript:void(0);" class="rarity'.$row->quality.'" rel="item='.$row->id.'">'.$amount.$row->name.'</a>',
-			'zone'		=>	$row->zone,
-			'boss'		=>	$amount>1?'-':$row->boss,
-			'player'	=>	$row->player,
+			array('data' 	=>	'<a href="javascript:void(0);" class="rarity'.$row->quality.'" rel="item='.$row->id.'">'.$amount.$row->name.'</a>'),
+			array('data'	=>	$row->zone),
+			array('data'	=>	$amount>1?'-':$row->itemboss),
+			array('data'	=>	$row->player),
+			array('data'	=>	format_date(strtotime($row->date), 'custom', 'd.m.Y')),
 		);
 	}
-	$output =  theme('table', $head, $drops);
+	$output  =  theme('tablesort_pager');
+	$output .=  theme('table', $head, $drops, array('id' => 'loots', 'class' => 'tablesorter'));
 	return $output;
 }
+
