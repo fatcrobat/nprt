@@ -1,8 +1,8 @@
-/* tables */
+/* tablesorter */
 table.tablesorter {
 	font-family:arial;
 	background-color: #CDCDCD;
-	margin:10px 0pt 15px;
+	margin:0 0pt 15px;
 	font-size: 8pt;
 	width: 100%;
 	text-align: left;
@@ -44,22 +44,48 @@ table.tablesorter tr{
 	border-bottom: 1px solid #b3cbce;
 }
 
+.tablesortpager{
+	background-color:#538890;
+	border-left:1px solid #CDCDCD;
+	border-right:1px solid #CDCDCD;
+	border-top:1px solid #CDCDCD;
+	color:#FFFFFF;
+	height:25px;
+	padding:4px;
+}
+
+.tablesortpager label{
+	font-size:0.9em;
+} 
+
 .tablesortpager .control{
 	float: right;
 }
 
+.tablesortpager .control-left{
+	float: left;
+	padding-top: 2px;
+}
+
 .tablesortpager .control a.btn{
 	font-size:0.9em;
-	margin-left:1px;
+	margin-left:-3px;
+}
+
+.tablesortpager .pagesize-wrapper,
+.tablesortpager .pager-wrapper{
+	float: left;
+	line-height:23px;
 }
 
 .tablesortpager .pagesize-wrapper{
-	float: left;
+	margin-top:1px;
 }
 
 .tablesortpager .pagesize-wrapper select{
-	width: 40px;
-	margin: 0 5px;
+	margin:0 9px 0 3px;
+	text-align:center;
+	width:50px;
 }
 
 .tablesortpager input.pagedisplay{
@@ -77,5 +103,21 @@ table.tablesorter tr{
 }
 
 .tablesortpager #filter-clear-button{
-	font-size: 0.9em;
+	font-size: 1em;
+}
+
+.tablesortpager .form-select{
+	padding:0;
+}
+
+table.tablesorter .l_align{
+	text-align: left;
+}
+
+table.tablesorter .m_align{
+	text-align: center;
+}
+
+table.tablesorter .r_align{
+	text-align: right;
 }
