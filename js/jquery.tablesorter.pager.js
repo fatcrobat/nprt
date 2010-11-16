@@ -2,14 +2,181 @@
 	$.extend({
 		tablesorterPager: new function() {
 			
-			 function updatePageDisplay(c) {
-				 //var s = $(c.cssPageDisplay, c.container).val((c.page + 1) + c.seperator + c.totalPages);
+			 function updatePageDisplay(c, table) {
 				 var s = $(c.cssPageDisplay, c.container).val((c.page + 1));
 				 s += $(c.cssPageCount, c.container).text(c.totalPages);
-//	             var s = $(c.cssPageDisplay, c.container).text("Page " + (c.page + 1) + 
-//	                  c.seperator + c.totalPages + "   (" + c.rowsCopy.length + " Records)");
-	         }
+				 
+				var pageSelect1 = $(c.cssPageSelect1);
+				var pageSelect2 = $(c.cssPageSelect2);
+				var pageSelect3 = $(c.cssPageSelect3);
+				
+				var currPage = c.page + 1;
+				
+				var prefix = c.cssPageSpanInner?'<span>':'';
+				var suffix = c.cssPageSpanInner?'</span>':'';
+				
+				//handling different total # of pages
+				switch(c.totalPages){
+					case 0:
+					case 1:						
+						$(pageSelect1)[0].innerHTML = prefix+"1"+suffix;
+						$(pageSelect2).hide();
+						$(pageSelect3).hide();					
+						
+						disableArrows(c, { prevArrow: true, nextArrow: true, lastArrow: true, firstArrow: true });
+						
+						break;
+					case 2:
+						$(pageSelect1)[0].innerHTML = prefix+"1"+suffix;
+						$(pageSelect2)[0].innerHTML = prefix+"2"+suffix;
+						$(pageSelect3).hide();
+						enableArrows(c, { prevArrow: true, nextArrow: true, lastArrow: true, firstArrow: true });
+						break;
+					case 3:
+						enableArrows(c, { prevArrow: true, nextArrow: true, lastArrow: true, firstArrow: true });
+					
+						$(pageSelect1)[0].innerHTML = prefix+"1"+suffix;
+						$(pageSelect2)[0].innerHTML = prefix+"2"+suffix;
+						$(pageSelect3)[0].innerHTML = prefix+"3"+suffix;
+						
+						$(pageSelect1).show();
+						$(pageSelect2).show();
+						$(pageSelect3).show();					
+						break;					
+					default:
+						//4 or more pages so show all the arrows
+						enableArrows(c, { prevArrow: true, nextArrow: true, lastArrow: true, firstArrow: true });
+					
+						//last page or 2nd to last page
+						if((currPage == c.totalPages) || (currPage == c.totalPages-1)){
+							$(pageSelect1)[0].innerHTML = prefix+(c.totalPages-2)+suffix;
+							$(pageSelect2)[0].innerHTML = prefix+(c.totalPages-1)+suffix;
+							$(pageSelect3)[0].innerHTML = prefix+(c.totalPages)+suffix;
+						}else{
+							$(pageSelect1)[0].innerHTML = prefix+currPage+suffix;
+							$(pageSelect2)[0].innerHTML = prefix+(currPage+1)+suffix;
+							$(pageSelect3)[0].innerHTML = prefix+(currPage+2)+suffix;
+						}
+						$(pageSelect1).show();
+						$(pageSelect2).show();
+						$(pageSelect3).show();
+				}
+				
+				//clear the classes
+				$(pageSelect1).removeClass("sel");
+				$(pageSelect2).removeClass("sel");
+				$(pageSelect3).removeClass("sel");
+				
+				//bind page selects so users can click on the number to navigate
+				$(pageSelect1).unbind('click');
+				$(pageSelect2).unbind('click');
+				$(pageSelect3).unbind('click');			
+				
+				var t = 0;
+				$(pageSelect1).click(function(){
+					t = c.cssPageSpanInner?$(this).find('span').html():$(this).html();
+					moveToThisPage(table,t*1);
+				});
+				$(pageSelect2).click(function(){
+					t = c.cssPageSpanInner?$(this).find('span').html():$(this).html();
+					moveToThisPage(table,t*1);
+				});
+				$(pageSelect3).click(function(){		
+					t = c.cssPageSpanInner?$(this).find('span').html():$(this).html();
+					moveToThisPage(table,t*1);
+				});
+				
+				//set selected or not
+				var t1 = c.cssPageSpanInner?$(pageSelect1).find('span').html():$(pageSelect1).html();
+				var t2 = c.cssPageSpanInner?$(pageSelect2).find('span').html():$(pageSelect2).html();
+				var t3 = c.cssPageSpanInner?$(pageSelect3).find('span').html():$(pageSelect3).html();
+				if(t1*1 == currPage){					
+					$(pageSelect1).addClass("sel");
+					$(pageSelect2).addClass("p");
+					$(pageSelect3).addClass("p");
+				}else if(t2*1 == currPage){
+					$(pageSelect2).addClass("sel");
+					$(pageSelect1).addClass("p");
+					$(pageSelect3).addClass("p");					
+				}else if(t3*1 == currPage){
+					$(pageSelect3).addClass("sel");					
+					$(pageSelect1).addClass("p");
+					$(pageSelect2).addClass("p");
+				}
+				//enable or disable arrows depending on the page we're on
+				if(currPage == 1){
+					disableArrows(c, { prevArrow: true, nextArrow: false, lastArrow: false, firstArrow: true });					
+				}else if(currPage == c.totalPages){	
+					disableArrows(c, { prevArrow: false, nextArrow: true, lastArrow: true, firstArrow: false });
+				}				
+				
+	        }
+			 
+			function disableArrows(c, arrowOptions){
+						
+				//store reference
+				var arrows = {
+					next: $(c.cssNext),
+					prev: $(c.cssPrev),
+					last: $(c.cssLast),
+					first: $(c.cssFirst)
+				};
+								
+				if((arrowOptions.prevArrow) && ($(arrows.prev).hasClass("on"))){
+					$(arrows.prev).removeClass("on");
+					$(arrows.prev).addClass("off");						
+				}
+				
+				if((arrowOptions.nextArrow) && ($(arrows.next).hasClass("on"))){
+					$(arrows.next).removeClass("on");
+					$(arrows.next).addClass("off");						
+				}
+				
+				if((arrowOptions.firstArrow) && ($(arrows.first).hasClass("on"))){
+					$(arrows.first).removeClass("on");
+					$(arrows.first).addClass("off");						
+				}
+				
+				if((arrowOptions.lastArrow) && ($(arrows.last).hasClass("on"))){
+					$(arrows.last).removeClass("on");
+					$(arrows.last).addClass("off");						
+				}				
+			}
+
 			
+			function enableArrows(c, arrowOptions){				
+											
+				//store reference
+				var arrows = {
+					next: $(c.cssNext),
+					prev: $(c.cssPrev),
+					last: $(c.cssLast),
+					first: $(c.cssFirst)
+				};
+				
+				if((arrowOptions.prevArrow) && ($(arrows.prev).hasClass("off"))){			
+					$(arrows.prev).removeClass("off");
+					$(arrows.prev).addClass("on");
+				}
+				
+				if((arrowOptions.nextArrow) && ($(arrows.next).hasClass("off"))){
+					$(arrows.next).removeClass("off");
+					$(arrows.next).addClass("on");						
+				}
+				
+				if((arrowOptions.firstArrow) && ($(arrows.first).hasClass("off"))){
+					$(arrows.first).removeClass("off");
+					$(arrows.first).addClass("on");						
+				}
+				
+				if((arrowOptions.lastArrow) && ($(arrows.last).hasClass("off"))){
+					$(arrows.last).removeClass("off");
+					$(arrows.last).addClass("on");						
+				}
+			}
+
+			 
+			 
 			function setPageSize(table,size) {
 				var c = table.config;
 				c.size = size;
@@ -87,18 +254,16 @@
 				if(c.page < 0 || c.page > (c.totalPages-1)) {
 					c.page = 0;
 				}
-				renderTable(table,c.rowsCopy);
+				renderTable(table,c.rowsCopy, true);
 			}
 			
-			function moveToDirectPage(table, value) {
+			function moveToThisPage(table, page) {
 				var c = table.config;
-				c.page = value-1;
-				if(c.page > (c.totalPages-1)) {
-					c.page = c.totalPages-1;
-				}else if(c.page < 0){
+				c.page = page-1;
+				if(c.page <= 0) {
 					c.page = 0;
 				}
-				renderTable(table,c.rowsCopy,true);
+				moveToPage(table);
 			}
 			
 			function renderTable(table,rows,update) {
@@ -138,7 +303,7 @@
         			moveToLastPage(table);
 				}
 				if(update){
-					updatePageDisplay(c);
+					updatePageDisplay(c, table);
 				}
 			}
 			
@@ -160,13 +325,17 @@
 				totalRows: 0,
 				totalPages: 0,
 				container: null,
-				cssNext: '.next',
-				cssPrev: '.prev',
-				cssFirst: '.first',
-				cssLast: '.last',
-				cssPageDisplay: '.pagedisplay',
-				cssPageCount: '.pagecount',
-				cssPageSize: '.pagesize',
+				cssNext: '#pageNext',
+				cssPrev: '#pagePrev',
+				cssFirst: '#pageFirst',
+				cssLast: '#pageLast',
+				cssPageDisplay: '#pageDisplay',
+				cssPageCount: '#pageCount',
+				cssPageSize: '#pageSize',
+				cssPageSelect1: '#pageSelect1',
+				cssPageSelect2: '#pageSelect2',
+				cssPageSelect3: '#pageSelect3',
+				cssPageSpanInner: true,
 				seperator: "/",
 				positionFixed: true,
 				appender: this.appender
@@ -206,7 +375,7 @@
 					});
 					$(config.cssPageDisplay,pager).keyup(function(){
 						var num = $(this).val();
-						if(num != '') moveToDirectPage(table, $(this).val());
+						if(num != '') moveToThisPage(table, $(this).val());
 						return false;
 					});
 					$(config.cssPageDisplay,pager).keypress(function(e){
