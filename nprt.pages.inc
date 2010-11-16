@@ -1,32 +1,44 @@
 <?php 
 
-function nprt_attendance_page(){
+function nprt_player_page(){
 	//timer_start('1');
 	$tables = array();
 	$head = array(
-				array('data' => t('Player'), 'field' => 'name'),
-				array('data' => t('%'), 'field' => 'attendance')
+				array('data' 	=> t('Player')),
+				array('data'	=> t('Achievement Points')),
+				array('data'	=> t('Race')),
+				array('data'	=> t('Class')),
+				array('data' 	=> t('Attendance (%)'))
 			);
 			
-	$sql =  "SELECT p.name, p.class ,".
+	$sql =  "SELECT p.* ,".
 			"ROUND(COUNT(pr.player_id)/(SELECT COUNT(*) FROM {nprt_raid})*100, 2) as attendance ".
 			"FROM {nprt_player} p ".
 			"LEFT JOIN {nprt_player_raid} pr ON pr.player_id = p.id ".
-			"GROUP BY p.id, p.class " .tablesort_sql($head);
+			"GROUP BY p.id, p.class";
 		
 	$res = db_query($sql);
 	$table = array();
 	$rows = array();
 	while($row = db_fetch_array($res)){
-		$rows[$row['class']][] = array(
-			'name' 			=> 	$row['name'], 
-			'attendance'	=>	$row['attendance']);
+		$rows[] = array(
+			'name' 			=> 	'<div class="l_align"><a href="javascript:void();" class="bold '.$row["class"].'">'.$row['name'].'</a></div>',
+			'achievement'	=> 	'<div class="r_align">TODO: Retrieve from Armory...</div>',
+			'race'			=> 	'<div class="r_align"><img src="'.base_path().drupal_get_path("module", "nprt")."/px/races/".$row['race'].'_'.$row['sex'].'.gif"
+								title="'.$row['race'].' '.$row['sex'].'" 
+								alt="'.$row['race'].' '.$row['sex'].'" /></div>',
+			'class'			=>	'<div clas="l_align"><img src="'.base_path().drupal_get_path("module", "nprt")."/px/classes/".$row['class'].'.gif" 
+								title="'.$row['class'].'" alt="'.$row['class'].'"/></div>',
+			'attendance'	=>	'<div clas="m_align">'.$row['attendance'].'</div>',
+		);
 	}
 	foreach(getClassesFromEnum() as $class){
 		$tables[$class] = theme('table', $head, $rows[$class], array('class' => $class), $class);
 	}
 	//print_r(timer_stop('1'));
-	return theme('item_list', $tables);
+	$output  = theme('tablesort_pager');
+	$output .= theme('table', $head, $rows, array('id' => 'attendance', 'class' => 'tablesorter'));
+	return $output;
 }
 
 function nprt_player_items_page(){

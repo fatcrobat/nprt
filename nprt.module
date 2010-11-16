@@ -10,24 +10,25 @@ function nprt_menu(){
 	$items = array();
 	$items['raids'] = array(
 		'title' => t('Raids'),
-		'description' => 'Nextpls Raidtracker helps you to track your Raids.',
-		'access arguments' => array('access nprt'),
-		'file'	=> 'nprt.pages.inc',
-		'page callback' => 'nprt_attendance_page',
-		'type' => MENU_NORMAL_ITEM,
-	);
-	$items['raids/info'] = array(
-	    'title' => t('Attendance'),
-		'description' => 'Show Latest Loots.',
-		'type' => MENU_DEFAULT_LOCAL_TASK,
-  	);
-	$items['raids/items'] = array(
-	    'title' => t('Loots'),
 		'description' => 'Show Latest Loots.',
 		'page callback' => 'nprt_player_items_page',
 		'access arguments' => array('access nprt'),
-		'type' => MENU_LOCAL_TASK,
+		'type' => MENU_NORMAL_ITEM,
 		'file'	=> 'nprt.pages.inc',
+		
+	);
+	$items['raids/items'] = array(
+	    'title' => t('Loots'),
+		'description' => 'Show Latest Loots.',
+		'type' => MENU_DEFAULT_LOCAL_TASK,
+  	);
+	$items['raids/players'] = array(
+	    'title' => t('Players'),
+		'description' => 'Nextpls Raidtracker helps you to track your Raids.',
+		'access arguments' => array('access nprt'),
+		'file'	=> 'nprt.pages.inc',
+		'page callback' => 'nprt_player_page',
+		'type' => MENU_LOCAL_TASK,
   	);
 
 	$items['admin/settings/nprt'] = array(
@@ -69,6 +70,7 @@ function nprt_theme() {
       	),
       ),
       'tablesort_pager' => array(
+      	'template' => 'templates/tablesort_pager',
       	'arguments'	=>	array()
       ),
    );   
@@ -88,31 +90,4 @@ function theme_nprt_javascript() {
 
 function theme_nprt_stylesheet() {
   drupal_add_css(drupal_get_path('module', 'nprt').'/css/nprt.css');
-}
-
-function theme_tablesort_pager(){
-	$output  = '<div id="pager"  class="tablesortpager">';
-	$output .= '<form>';
-	$output .= '<div class="control">';
-	$output .= '<div class="pagesize-wrapper">';
-	$output .= '<label for="pagesize">'.t('Results per page').'</label>';
-	$output .= '<select name="pagesize" class="pagesize">';
-	$output .= '<option selected="selected"  value="25">25</option>';
-	$output .= '<option value="30">30</option>';
-	$output .= '<option value="40">40</option>';
-	$output .= '<option  value="50">50</option>';
-	$output .= '</select>';
-	$output .= '</div>';
-	$output .= '<a href="javascript:void(0);" class="first btn green"><span>&lsaquo;&lsaquo;</span></a>';
-	$output .= '<a href="javascript:void(0);" class="prev btn green"><span>&lsaquo;</span></a>';
-	$output .= '<a href="javascript:void(0);" class="next btn green"><span>&rsaquo;</span></a>';
-	$output .= '<a href="javascript:void(0);" class="last btn green"><span>&rsaquo;&rsaquo;</span></a>';
-	$output .= '</div>';
-	$output .= '<label>'.t('Page').'</label><input id="pagedisplay" class="pagedisplay" type="text" />'.t('of').' <span class="pagecount"></span>';
-	$output .= t('Search').'<input name="filter" id="filter-box" value="" maxlength="20" size="20" type="text">';
-	$output .= '<a href="javascript:void(0);" id="filter-clear-button" class="btn green"><span>'.t('clear').'</span></a>';
-	$output .= '</form>';
-	$output .= '<div class="count"></div>';
-	$output .= '</div>';
-	return $output;
 }
