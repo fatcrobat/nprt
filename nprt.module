@@ -103,12 +103,12 @@ function theme_tablesort_pager(){
 	$output .= '<option  value="50">50</option>';
 	$output .= '</select>';
 	$output .= '</div>';
-	$output .= '<a href="javascript:void(0);" class="first">&lsaquo;&lsaquo;</a>';
-	$output .= '<a href="javascript:void(0);" class="prev">&lsaquo;</a>';
-	$output .= '<a href="javascript:void(0);" class="next">&rsaquo;</a>';
-	$output .= '<a href="javascript:void(0);" class="last">&rsaquo;&rsaquo;</a>';
+	$output .= '<a href="javascript:void(0);" class="first btn green"><span>&lsaquo;&lsaquo;</span></a>';
+	$output .= '<a href="javascript:void(0);" class="prev btn green"><span>&lsaquo;</span></a>';
+	$output .= '<a href="javascript:void(0);" class="next btn green"><span>&rsaquo;</span></a>';
+	$output .= '<a href="javascript:void(0);" class="last btn green"><span>&rsaquo;&rsaquo;</span></a>';
 	$output .= '</div>';
-	$output .= '<label>'.t('Page').'</label><input class="pagedisplay" type="text" />'.t('of').' <span class="pagecount"></span>';
+	$output .= '<label>'.t('Page').'</label><input id="pagedisplay" class="pagedisplay" type="text" />'.t('of').' <span class="pagecount"></span>';
 	$output .= t('Search').'<input name="filter" id="filter-box" value="" maxlength="20" size="20" type="text">';
 	$output .= '<a href="javascript:void(0);" id="filter-clear-button" class="btn green"><span>'.t('clear').'</span></a>';
 	$output .= '</form>';

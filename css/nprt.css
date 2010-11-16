@@ -48,23 +48,9 @@ table.tablesorter tr{
 	float: right;
 }
 
-.tablesortpager .control a{
-	background-color:#095360;
-	border:1px solid #A6BBBC;
-	color:#FFFFFF;
-	display:block;
-	float:left;
-	font-size:0.875em;
-	height:20px;
-	line-height:18px;
-	margin:0 0 0 2px;
-	text-align:center;
-	text-decoration:none;
-	width:20px;
-}
-
-.tablesortpager .control a:hover{
-	background-color:#538890;
+.tablesortpager .control a.btn{
+	font-size:0.9em;
+	margin-left:1px;
 }
 
 .tablesortpager .pagesize-wrapper{
@@ -72,17 +58,18 @@ table.tablesorter tr{
 }
 
 .tablesortpager .pagesize-wrapper select{
-	width: 80px;
-	margin-left: 5px;
+	width: 40px;
+	margin: 0 5px;
 }
 
 .tablesortpager input.pagedisplay{
 	width: 20px;
 	text-align: center;
+	margin: 0 5px;
 }
 
 .tablesortpager span.pagecount{
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .tablesortpager #filter-box{

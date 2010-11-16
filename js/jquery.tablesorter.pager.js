@@ -62,6 +62,24 @@
 				}
 				moveToPage(table);
 			}
+			
+			function moveToPrevDirectPage(table) {
+				var c = table.config;
+				c.page--;
+				if(c.page <= 0) {
+					c.page = 0;
+				}
+				renderTable(table,c.rowsCopy,true);
+			}
+			
+			function moveToNextDirectPage(table) {
+				var c = table.config;
+				c.page++;
+				if(c.page >= (c.totalPages-1)) {
+					c.page = (c.totalPages-1);
+				}
+				renderTable(table,c.rowsCopy,true);
+			}
 						
 			
 			function moveToPage(table) {
@@ -69,12 +87,21 @@
 				if(c.page < 0 || c.page > (c.totalPages-1)) {
 					c.page = 0;
 				}
-				
 				renderTable(table,c.rowsCopy);
 			}
 			
-			function renderTable(table,rows) {
-				
+			function moveToDirectPage(table, value) {
+				var c = table.config;
+				c.page = value-1;
+				if(c.page > (c.totalPages-1)) {
+					c.page = c.totalPages-1;
+				}else if(c.page < 0){
+					c.page = 0;
+				}
+				renderTable(table,c.rowsCopy,true);
+			}
+			
+			function renderTable(table,rows,update) {
 				var c = table.config;
 				var l = rows.length;
 				var s = (c.page * c.size);
@@ -110,8 +137,9 @@
 				if( c.page >= c.totalPages ) {
         			moveToLastPage(table);
 				}
-				
-				updatePageDisplay(c);
+				if(update){
+					updatePageDisplay(c);
+				}
 			}
 			
 			this.appender = function(table,rows) {
@@ -122,7 +150,7 @@
 				c.totalRows = rows.length;
 				c.totalPages = Math.ceil(c.totalRows / c.size);
 				
-				renderTable(table,rows);
+				renderTable(table,rows,true);
 			};
 			
 			this.defaults = {
@@ -175,6 +203,29 @@
 					$(config.cssPageSize,pager).change(function() {
 						setPageSize(table,parseInt($(this).val()));
 						return false;
+					});
+					$(config.cssPageDisplay,pager).keyup(function(){
+						var num = $(this).val();
+						if(num != '') moveToDirectPage(table, $(this).val());
+						return false;
+					});
+					$(config.cssPageDisplay,pager).keypress(function(e){
+						var num = $(this).val();
+						switch(e.keyCode) { 
+				         // User pressed "up" arrow
+				         case 38:
+				        	 $(this).val(num+1); 
+				        	 moveToNextDirectPage(table);
+				         break;
+				         // User pressed "down" arrow
+				         case 40:
+				        	 $(this).val(num-1); 
+				        	 moveToPrevDirectPage(table);
+				         break;
+				         case 13:
+				        	 // User pressed "enter"
+				         break;
+				      }
 					});
 				});
 			};
